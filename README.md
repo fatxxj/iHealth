@@ -2,11 +2,20 @@
 
 
 
-## Getting started
+## Si te behet hapja e grafit
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+> Hapet draw.io. 
+> Klikohet decide later 
+> Ne anen e majt klikohet ne file 
+> Prej aty klikohet ne open from 
+> Prej aty klikohet ne gitlab 
+> Ne qofte se kjo eshte hera e par qe hapet grafi, autorizohet gtilabi duke shtypur authorize 
+> Shtyp E-Clinic 
+> Shtyp E-Clinic graph 
+> Shtyp Open in this window 
+> Ne graf ju lutem mos beni ndryshime ! Per ndryshime kontakto @Fat Halimi
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+
 
 ## Add your files
 
