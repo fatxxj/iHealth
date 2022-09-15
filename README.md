@@ -4,6 +4,7 @@
 
 ## Si te behet hapja e grafit
 
+```
 - > Hapet draw.io. 
 - > Klikohet decide later 
 - > Ne anen e majt klikohet ne file 
@@ -14,7 +15,7 @@
 - > Shtyp E-Clinic graph 
 - > Shtyp Open in this window 
 - > Ne graf ju lutem mos beni ndryshime ! Per ndryshime kontakto @Fat Halimi
-
+```
 
 
 
