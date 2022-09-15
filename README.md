@@ -4,16 +4,17 @@
 
 ## Si te behet hapja e grafit
 
-> Hapet draw.io. 
-> Klikohet decide later 
-> Ne anen e majt klikohet ne file 
-> Prej aty klikohet ne open from 
-> Prej aty klikohet ne gitlab 
-> Ne qofte se kjo eshte hera e par qe hapet grafi, autorizohet gtilabi duke shtypur authorize 
-> Shtyp E-Clinic 
-> Shtyp E-Clinic graph 
-> Shtyp Open in this window 
-> Ne graf ju lutem mos beni ndryshime ! Per ndryshime kontakto @Fat Halimi
+- > Hapet draw.io. 
+- > Klikohet decide later 
+- > Ne anen e majt klikohet ne file 
+- > Prej aty klikohet ne open from 
+- > Prej aty klikohet ne gitlab 
+- > Ne qofte se kjo eshte hera e par qe hapet grafi, autorizohet gtilabi duke shtypur authorize 
+- > Shtyp E-Clinic 
+- > Shtyp E-Clinic graph 
+- > Shtyp Open in this window 
+- > Ne graf ju lutem mos beni ndryshime ! Per ndryshime kontakto @Fat Halimi
+
 
 
 
