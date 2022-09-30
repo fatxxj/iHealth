@@ -16,6 +16,9 @@ namespace iHealthAPI.Models
         public string Name { get; set; }
 
         [Display(Name = "Email")]
+        public int? PlaceId { get; set; }
+
+        [Display(Name = "Email")]
         public string Email { get; set; }
         
         [Display(Name = "PhoneNumber")]
@@ -35,6 +38,9 @@ namespace iHealthAPI.Models
 
         [Display(Name = "User")]
         public virtual User User { get; set; }
+
+        [Display(Name = "User")]
+        public virtual Place Place { get; set; }
 
         //TODO: Link Worker after creating worker
         //TODO: Link Finances after creating finances
