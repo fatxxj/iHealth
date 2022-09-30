@@ -1,6 +1,5 @@
 ﻿using iHealthAPI.Data;
 using iHealthAPI.Models;
-using iHealthAPI.Models.User;
 using iHealthAPI.Services;
 using iHealthAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication;

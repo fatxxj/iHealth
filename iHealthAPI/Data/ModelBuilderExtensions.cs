@@ -1,10 +1,9 @@
-﻿using iHealthAPI.Models.User;
-using iHealthAPI.Services;
+﻿using iHealthAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 using System.Text;
 using System.Security.Cryptography;
-
+using iHealthAPI.Models;
 
 public static class ModelBuilderExtensions 
 {
