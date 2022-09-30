@@ -1,0 +1,44 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace iHealthAPI.Models
+{
+    public class Clinic
+    {
+        
+
+        [Key]
+        [Required]
+        [Display(Name = "Id")]
+        public int Id { get; set; }
+
+        [Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+        
+        [Display(Name = "PhoneNumber")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        [Display(Name = "RegistrationNo")]
+        public string RegistrationNo { get; set; }
+
+        [Required]
+        [Display(Name = "ClinicTypeEnum")]
+        public ClinicTypeEnum ClinicTypeEnum { get; set; }
+
+        [Required]
+        [Display(Name = "UserId")]
+        public int UserId { get; set; }
+
+        [Display(Name = "User")]
+        public virtual User User { get; set; }
+
+        //TODO: Link Worker after creating worker
+        //TODO: Link Finances after creating finances
+        //TODO: Link Archive after creating archive
+        //TODO: Link Storage after creating storage
+    }
+}

@@ -1,5 +1,4 @@
 ﻿using iHealthAPI.Models;
-using iHealthAPI.Models.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Principal;
@@ -43,5 +42,6 @@ namespace iHealthAPI.Data
 
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<Clinic> Clinic { get; set; }
     }
 }
