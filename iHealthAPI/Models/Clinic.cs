@@ -30,7 +30,10 @@ namespace iHealthAPI.Models
 
         [Required]
         [Display(Name = "ClinicTypeEnum")]
-        public ClinicTypeEnum ClinicTypeEnum { get; set; }
+        public ClinicTypeEnum ClinicType { get; set; }
+
+        [Display(Name = "ClinicTypeString")]
+        public string ClinicTypeString { get; set; }
 
         [Required]
         [Display(Name = "UserId")]

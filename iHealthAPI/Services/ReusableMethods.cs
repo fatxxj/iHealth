@@ -5,7 +5,7 @@ using System.Text;
 using System.Security.Cryptography;
 using iHealthAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using iHealthAPI.Models.User;
+using static iHealthAPI.Models.User;
 
 namespace iHealthAPI.Services
 {
