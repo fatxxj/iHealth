@@ -1,0 +1,66 @@
+.header-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 1rem;
+}
+
+
+
+
+.medical-icon img {
+    max-width: 2rem;
+}
+
+.header-left-style {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.header-left-style button:hover {
+    background-color: #005FFF;
+    color: white;
+}
+
+.header-right-style {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+
+}
+
+.header-right-style button:hover {
+    background-color: #005FFF;
+    color: white;
+}
+
+.create-login-button {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        background-color: #005FFF;
+        color: white;
+        border-radius: 25px;
+
+    }
+}
+
+.create-login-button button {
+    border-radius: 20px;
+}
+
+.hr-style {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    background-color: #005FFF;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

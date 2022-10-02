@@ -1,0 +1,80 @@
+.hand-photo {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5rem;
+}
+
+.hand {
+    display: grid;
+    margin: 0 auto;
+
+}
+
+.hand-icon {
+
+
+    img {
+        max-width: 2rem;
+
+    }
+}
+
+.text {
+    font-size: 35px;
+    font-weight: bold;
+    color: #005FFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-one {
+    font-size: 17px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.learn-more-button {
+    button {
+        background-color: #005FFF;
+        border-radius: 25px;
+        color: white;
+        width: 10rem;
+    }
+}
+
+.photo {
+    display: grid;
+    margin: 0 auto;
+
+    img {
+        border-radius: 25px;
+
+    }
+}
+
+.background {
+    background-color: #005FFF;
+    width: 80%;
+    height: 250px;
+    border-radius: 70px 20px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.three-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+    margin: auto;
+    gap: 15rem;
+
+
+}
+
+.free-support {
+    button {
+        background-color: #00ff05d6;
+        border-radius: 25px;
+        color: white;
+        width: 10rem;
+    }
+}
