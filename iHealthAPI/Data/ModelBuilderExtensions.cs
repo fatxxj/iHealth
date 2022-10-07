@@ -24,6 +24,17 @@ public static class ModelBuilderExtensions
             return null;
         }
 
+        modelBuilder.Entity<Place>().HasData(
+           new Place
+           {
+               Id = 1,
+               CityName = "Demo City",
+               Address = "Demo Address",
+               ZipCode = "Demo ZipCode",
+               CountyName = "Demo Country",
+               Region = "Demo Region"
+           });
+
         modelBuilder.Entity<User>().HasData(
                new User
                {
@@ -32,7 +43,7 @@ public static class ModelBuilderExtensions
                    Surname = "Halimi ",
                    Email = "halimifat@gmail.com",
                    Password = HashString("UserPassword "),
-                   
+                   PlaceId = 1
                });
 
         modelBuilder.Entity<Clinic>().HasData(
@@ -49,16 +60,8 @@ public static class ModelBuilderExtensions
                    UserId=1               
             });
 
-        modelBuilder.Entity<Place>().HasData(
-            new Place
-            {
-                   Id = 1,
-                   CityName="Demo City",
-                   Address="Demo Address",
-                   ZipCode="Demo ZipCode",
-                   CountyName="Demo Country",
-                   Region = "Demo Region"
-            });
+
+
 
     }
 }

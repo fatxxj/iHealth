@@ -15,6 +15,7 @@ namespace iHealthAPI.Controllers
     {
         private readonly AppDbContext dbContext;
         private readonly IReusableMethods reusable;
+
         public UsersController(AppDbContext dbContext, IReusableMethods reusable)
         {
             this.dbContext = dbContext;
@@ -35,7 +36,6 @@ namespace iHealthAPI.Controllers
             await dbContext.User.AddAsync(user);
             await dbContext.SaveChangesAsync();
             return Ok(user);
-
         }
 
         // Get method for user page
@@ -52,9 +52,12 @@ namespace iHealthAPI.Controllers
 
         //Update User method when user wants to update his basic information such as name surname
         [HttpPost]
-        public async Task<IActionResult> UpdatePersonalInformation(int id, UserPersonalInfo updateUser)
+        public async Task<IActionResult> UpdatePersonalInformation(
+            int id,
+            UserPersonalInfo updateUser
+        )
         {
-            var existingUser = await dbContext.User.Where(x => x.Id == id).FirstOrDefaultAsync() ;
+            var existingUser = await dbContext.User.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (existingUser != null)
             {
                 existingUser.Name = updateUser.Name;
@@ -71,19 +74,19 @@ namespace iHealthAPI.Controllers
         public async Task<IActionResult> ChangePassword(int id, ChangePassword changePassword)
         {
             var existingUser = await dbContext.User.Where(x => x.Id == id).FirstOrDefaultAsync();
-            if(existingUser!=null)
+            if (existingUser != null)
             {
-                if(existingUser.Password == reusable.HashString(changePassword.OldPassword))
+                if (existingUser.Password == reusable.HashString(changePassword.OldPassword))
                 {
                     existingUser.Password = reusable.HashString(changePassword.NewPassword);
                     await dbContext.SaveChangesAsync();
                     return Ok(existingUser);
                 }
                 return NotFound("The passwords do not match!");
-                
             }
             return NotFound("User is not found!");
         }
+
         //TODO: Change password with email , like forgot password
 
         // Change email method to change email if user knows old email and current Password
@@ -95,7 +98,7 @@ namespace iHealthAPI.Controllers
             {
                 if (changeEmail.OldEmail == existingUser.Email)
                 {
-                    if(existingUser.Password == reusable.HashString(changeEmail.Password))
+                    if (existingUser.Password == reusable.HashString(changeEmail.Password))
                     {
                         existingUser.Email = changeEmail.NewEmail;
                         await dbContext.SaveChangesAsync();
@@ -111,17 +114,17 @@ namespace iHealthAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(Login login)
         {
-            var existingUser = await dbContext.User.Where(x => x.Email == login.Email).FirstOrDefaultAsync();
+            var existingUser = await dbContext.User
+                .Where(x => x.Email == login.Email)
+                .FirstOrDefaultAsync();
             if (existingUser != null)
             {
                 var logInUser = await reusable.Authenticate(login);
                 return Ok(logInUser);
             }
             return NotFound("Email is not existing!");
-
         }
 
         //TODO: Log out method
-
     }
 }

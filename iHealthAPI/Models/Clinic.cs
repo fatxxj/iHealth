@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace iHealthAPI.Models
 {
     public class Clinic
     {
-        
-
         [Key]
         [Required]
         [Display(Name = "Id")]
@@ -16,11 +15,8 @@ namespace iHealthAPI.Models
         public string Name { get; set; }
 
         [Display(Name = "Email")]
-        public int? PlaceId { get; set; }
-
-        [Display(Name = "Email")]
         public string Email { get; set; }
-        
+
         [Display(Name = "PhoneNumber")]
         public string PhoneNumber { get; set; }
 
@@ -39,10 +35,13 @@ namespace iHealthAPI.Models
         [Display(Name = "UserId")]
         public int UserId { get; set; }
 
+        [Display(Name = "PlaceId")]
+        public int PlaceId { get; set; }
+
         [Display(Name = "User")]
         public virtual User User { get; set; }
 
-        [Display(Name = "User")]
+        [Display(Name = "Place")]
         public virtual Place Place { get; set; }
 
         //TODO: Link Worker after creating worker
