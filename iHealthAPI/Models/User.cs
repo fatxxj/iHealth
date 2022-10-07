@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace iHealthAPI.Models
 {
@@ -26,9 +27,13 @@ namespace iHealthAPI.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        [Display(Name = "PlaceId")]
+        public int PlaceId { get; set; }
+
         [Display(Name = "ClinicId")]
         public int ClinicId { get; set; }
 
         public virtual ICollection<Clinic> Clinics { get; set; }
+        public virtual Place Place { get; set; }
     }
 }
