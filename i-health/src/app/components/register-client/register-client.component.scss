@@ -1,0 +1,37 @@
+.medical-logo-style {
+    text-align: center;
+}
+
+.title-style {
+    text-align: center;
+    font-size: 25px;
+}
+
+.image-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+}
+
+.image-style {
+
+
+    img {
+        border-radius: 25px;
+    }
+}
+
+.form-style {
+    .mat-form-field {
+        width: 55%;
+    }
+
+    .register-button button {
+        width: 201px;
+        height: 46px;
+        color: white;
+        background-color: #005FFF;
+        border-radius: 7px;
+
+    }
+}
