@@ -58,19 +58,18 @@ namespace iHealthAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateClinic(int Id, Clinic editClinic)
+        public IActionResult UpdateClinic(int Id, UpdateClinicModel updateClinic)
         {
             var existingClinic = dbContext.Clinic.Where(x => x.Id == Id).FirstOrDefault();
             if (existingClinic != null)
             {
-                existingClinic.Name = editClinic.Name;
-                existingClinic.PlaceId = editClinic.PlaceId;
-                existingClinic.Email = editClinic.Email;
-                existingClinic.PhoneNumber = editClinic.PhoneNumber;
-                existingClinic.RegistrationNo = editClinic.RegistrationNo;
-                existingClinic.ClinicType = editClinic.ClinicType;
-                existingClinic.ClinicTypeString = editClinic.ClinicType.ToString();
-                existingClinic.UserId = editClinic.UserId;
+                existingClinic.Name = updateClinic.Name;
+                existingClinic.PlaceId = updateClinic.PlaceId;
+                existingClinic.Email = updateClinic.Email;
+                existingClinic.PhoneNumber = updateClinic.PhoneNumber;
+                existingClinic.RegistrationNo = updateClinic.RegistrationNo;
+                existingClinic.ClinicType = updateClinic.ClinicType;
+                existingClinic.ClinicTypeString = updateClinic.ClinicType.ToString();
 
                 dbContext.SaveChanges();
                 var result = new ObjectResult(new { StatusCode = 200, clinic = existingClinic });
