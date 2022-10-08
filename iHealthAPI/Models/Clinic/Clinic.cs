@@ -42,6 +42,7 @@ namespace iHealthAPI.Models
         public int? PlaceId { get; set; }
 
         public int? PatientId { get; set; }
+        public int? DoctorId { get; set; }
 
         [Display(Name = "User")]
         public virtual User User { get; set; }
@@ -50,6 +51,7 @@ namespace iHealthAPI.Models
         public virtual Place Place { get; set; }
 
         public virtual ICollection<Patient> Patients { get; set; }
+        public virtual ICollection<Doctor> Doctors { get; set; }
 
         //TODO: Link Worker after creating worker
         //TODO: Link Finances after creating finances

@@ -44,5 +44,6 @@ namespace iHealthAPI.Data
         public DbSet<Clinic> Clinic { get; set; }
         public DbSet<Place> Place { get; set; }
         public DbSet<Patient> Patient { get; set; }
+        public DbSet<Doctor> Doctor { get; set; }
     }
 }
