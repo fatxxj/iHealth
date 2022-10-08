@@ -68,5 +68,24 @@ public static class ModelBuilderExtensions
                     Image = "DemoClinic.png"
                 }
             );
+
+        modelBuilder
+            .Entity<Patient>()
+            .HasData(
+                new Patient
+                {
+                    Id = 1,
+                    Name = "Patient Fat",
+                    Surname = "Patient Halimi",
+                    Email = "halimifat@gmail.com",
+                    PhoneNumber = "070224560",
+                    PlaceId = 1,
+                    EMBG = "0012343",
+                    Gender = "Male",
+                    BirthDate = "12.07.2000",
+                    ClinicId = 1,
+                    Image = "DemoClinic.png"
+                }
+            );
     }
 }
