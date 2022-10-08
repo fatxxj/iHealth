@@ -9,7 +9,7 @@ public static class ModelBuilderExtensions
 {
     public static void Seed(this ModelBuilder modelBuilder)
     {
-        string HashString(string str)
+        string? HashString(string str)
         {
             if (str != null)
             {
@@ -87,5 +87,24 @@ public static class ModelBuilderExtensions
                     Image = "DemoClinic.png"
                 }
             );
+             modelBuilder
+            .Entity<Doctor>()
+            .HasData(
+                new Doctor
+                {
+                    Id = 1,
+                    Name = "Doctor Fat",
+                    Surname = "Doctor Halimi",
+                    Email = "halimifat@gmail.com",
+                    PhoneNumber = "070224560",
+                    PlaceId = 1,
+                    Faksimil = "0012343",
+                    Gender = "Male",
+                    BirthDate = "12.07.2000",
+                    ClinicId = 1,
+                    Image = "DemoClinic.png"
+                }
+            );
     }
+    
 }

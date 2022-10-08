@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace iHealthAPI.Models
 {
-    public class Patient
+    public class Doctor
     {
         [Key]
         public int Id { get; set; }
@@ -18,33 +18,36 @@ namespace iHealthAPI.Models
         [Required]
         public string Surname { get; set; }
 
-        public string EMBG { get; set; }
-
-        public string Image { get; set; }
-
+        [Required]
         public string Gender { get; set; }
 
+        [Required]
         public string BirthDate { get; set; }
 
-        public string PhoneNumber { get; set; }
-
+        [Required]
         public string Email { get; set; }
 
-        public int? PlaceId { get; set; }
-
-        // [Required]
-        // public int? DoctorId { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; }
 
         [Required]
-        public int ClinicId { get; set; }
+        public string Faksimil { get; set; }
 
-        public int? DoctorId { get; set; }
+        [Required]
+        public string Image { get; set; }
+
+        //Table references below ⤵
+
+        //TODO: Link JOBS
+
+        public int? PlaceId { get; set; }
+        public int? ClinicId { get; set; }
+
+        public int? PatientId { get; set; }
 
         public virtual Place Place { get; set; }
-
-        //TODO: Link doctor
         public virtual Clinic Clinic { get; set; }
 
-        public virtual ICollection<Doctor> Doctors { get; set; }
+        public virtual ICollection<Patient> Patients { get; set; }
     }
 }
