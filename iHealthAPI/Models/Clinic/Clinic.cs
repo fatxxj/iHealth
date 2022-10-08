@@ -31,12 +31,15 @@ namespace iHealthAPI.Models
         [Display(Name = "ClinicTypeString")]
         public string ClinicTypeString { get; set; }
 
+        [Display(Name = "Image")]
+        public string Image { get; set; }
+
         [Required]
         [Display(Name = "UserId")]
         public int UserId { get; set; }
 
         [Display(Name = "PlaceId")]
-        public int PlaceId { get; set; }
+        public int? PlaceId { get; set; }
 
         [Display(Name = "User")]
         public virtual User User { get; set; }

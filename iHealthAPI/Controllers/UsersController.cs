@@ -52,10 +52,7 @@ namespace iHealthAPI.Controllers
 
         //Update User method when user wants to update his basic information such as name surname
         [HttpPost]
-        public async Task<IActionResult> UpdatePersonalInformation(
-            int id,
-            UserPersonalInfo updateUser
-        )
+        public async Task<IActionResult> UpdatePersonalInformation(int id, UserPersonalInfo updateUser)
         {
             var existingUser = await dbContext.User.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (existingUser != null)
@@ -114,9 +111,7 @@ namespace iHealthAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(Login login)
         {
-            var existingUser = await dbContext.User
-                .Where(x => x.Email == login.Email)
-                .FirstOrDefaultAsync();
+            var existingUser = await dbContext.User.Where(x => x.Email == login.Email).FirstOrDefaultAsync();
             if (existingUser != null)
             {
                 var logInUser = await reusable.Authenticate(login);

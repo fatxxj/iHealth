@@ -12,15 +12,17 @@ namespace iHealthAPI.Controllers
     {
         private readonly AppDbContext dbContext;
         private readonly IReusableMethods reusable;
+        private readonly IHostEnvironment hostingEnvironment;
 
-        public ClinicsController(AppDbContext dbContext, IReusableMethods reusable)
+        public ClinicsController(AppDbContext dbContext, IReusableMethods reusable, IHostEnvironment hostingEnvironment)
         {
             this.dbContext = dbContext;
             this.reusable = reusable;
+            this.hostingEnvironment = hostingEnvironment;
         }
 
         [HttpPost]
-        public IActionResult CreateClinic(Clinic newClinic)
+        public async Task<IActionResult> CreateClinicAsync(Clinic newClinic)
         {
             var clinic = new Clinic
             {
@@ -33,15 +35,39 @@ namespace iHealthAPI.Controllers
                 ClinicTypeString = newClinic.ClinicTypeString.ToString(),
                 UserId = newClinic.UserId,
             };
+            var files = HttpContext.Request.Form.Files;
+            if (files.Count != 0)
+            {
+                foreach (var Image in files)
+                {
+                    var file = Image;
+                    string webRootPath = hostingEnvironment.ContentRootPath;
+                    if (file.Length > 0)
+                    {
+                        var newFileName = Image.FileName;
+                        if (!Directory.Exists(Path.Combine(webRootPath, "Images", "CompanyLogos")))
+                        {
+                            Directory.CreateDirectory(Path.Combine(webRootPath, "Images", "CompanyLogos"));
+                        }
+                        if (System.IO.File.Exists(Path.Combine(webRootPath, "Images", "CompanyLogos", newFileName)))
+                        {
+                            newFileName = Guid.NewGuid() + newFileName;
+                        }
+                        using (var filestream = new FileStream(Path.Combine(webRootPath, "Images", "CompanyLogos", newFileName), FileMode.Create))
+                        {
+                            await file.CopyToAsync(filestream);
+                            clinic.Image = newFileName;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                clinic.Image = "Logo-Placehoder.png";
+            }
             dbContext.Add(clinic);
             dbContext.SaveChanges();
-            var result = new OkObjectResult(
-                new
-                {
-                    message = "Status code 200. Clinic is created successfully!",
-                    clinicId = clinic.Id
-                }
-            );
+            var result = new OkObjectResult(new { message = "Status code 200. Clinic is created successfully!", clinicId = clinic.Id });
             return result;
         }
 
@@ -58,19 +84,50 @@ namespace iHealthAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateClinic(int Id, Clinic editClinic)
+        public async Task<IActionResult> UpdateClinicAsync(int Id, UpdateClinicModel updateClinic)
         {
             var existingClinic = dbContext.Clinic.Where(x => x.Id == Id).FirstOrDefault();
             if (existingClinic != null)
             {
-                existingClinic.Name = editClinic.Name;
-                existingClinic.PlaceId = editClinic.PlaceId;
-                existingClinic.Email = editClinic.Email;
-                existingClinic.PhoneNumber = editClinic.PhoneNumber;
-                existingClinic.RegistrationNo = editClinic.RegistrationNo;
-                existingClinic.ClinicType = editClinic.ClinicType;
-                existingClinic.ClinicTypeString = editClinic.ClinicType.ToString();
-                existingClinic.UserId = editClinic.UserId;
+                existingClinic.Name = updateClinic.Name;
+                existingClinic.PlaceId = updateClinic.PlaceId;
+                existingClinic.Email = updateClinic.Email;
+                existingClinic.PhoneNumber = updateClinic.PhoneNumber;
+                existingClinic.RegistrationNo = updateClinic.RegistrationNo;
+                existingClinic.Image = updateClinic.Image;
+                existingClinic.ClinicType = updateClinic.ClinicType;
+                existingClinic.ClinicTypeString = updateClinic.ClinicType.ToString();
+
+                var files = HttpContext.Request.Form.Files;
+                if (files.Count != 0)
+                {
+                    foreach (var Image in files)
+                    {
+                        var file = Image;
+                        string webRootPath = hostingEnvironment.ContentRootPath;
+                        if (file.Length > 0)
+                        {
+                            var newFileName = Image.FileName;
+                            if (!Directory.Exists(Path.Combine(webRootPath, "Images", "CompanyLogos")))
+                            {
+                                Directory.CreateDirectory(Path.Combine(webRootPath, "Images", "CompanyLogos"));
+                            }
+                            if (System.IO.File.Exists(Path.Combine(webRootPath, "Images", "CompanyLogos", newFileName)))
+                            {
+                                newFileName = Guid.NewGuid() + newFileName;
+                            }
+                            using (var filestream = new FileStream(Path.Combine(webRootPath, "Images", "CompanyLogos", newFileName), FileMode.Create))
+                            {
+                                await file.CopyToAsync(filestream);
+                                existingClinic.Image = newFileName;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    existingClinic.Image = "Logo-Placehoder.png";
+                }
 
                 dbContext.SaveChanges();
                 var result = new ObjectResult(new { StatusCode = 200, clinic = existingClinic });
