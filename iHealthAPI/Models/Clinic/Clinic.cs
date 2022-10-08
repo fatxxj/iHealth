@@ -31,6 +31,9 @@ namespace iHealthAPI.Models
         [Display(Name = "ClinicTypeString")]
         public string ClinicTypeString { get; set; }
 
+        [Display(Name = "Image")]
+        public string Image { get; set; }
+
         [Required]
         [Display(Name = "UserId")]
         public int UserId { get; set; }

@@ -14,5 +14,6 @@ namespace iHealthAPI.Models
         public string PhoneNumber { get; set; }
         public string RegistrationNo { get; set; }
         public ClinicTypeEnum ClinicType { get; set; }
+        public string Image { get; set; }
     }
 }

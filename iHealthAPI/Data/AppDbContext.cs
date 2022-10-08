@@ -9,8 +9,8 @@ namespace iHealthAPI.Data
     {
         private const string appUser = "SampleApplication";
 
-
         private readonly IHttpContextAccessor _httpContextAccessor;
+
         public AppDbContext(DbContextOptions<AppDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
         {
             Database.EnsureCreated();
@@ -18,7 +18,6 @@ namespace iHealthAPI.Data
             {
                 _httpContextAccessor = httpContextAccessor;
             }
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -35,9 +34,9 @@ namespace iHealthAPI.Data
         //{
         //    return base.SaveChanges();
         //}
-        
 
-        
+
+
 
 
         public DbSet<Contact> Contacts { get; set; }
