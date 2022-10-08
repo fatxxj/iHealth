@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-07T23:46:38.902Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="Qbd40Ysf6g4ewGKubJHP" version="20.4.0" type="gitlab" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-08T11:15:11.372Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="D0GNfEEhPOrPFDTBYrA5" version="20.4.0" type="gitlab" pages="2">
   <diagram id="tLgGdqZi1JV7m5W0IdGu" name="Entity Diagram">
     <mxGraphModel dx="3761" dy="4094" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -394,128 +394,128 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="qTn01u50Xc4HS7Byytp3-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;" parent="1" source="dVNsWB34gm-yXkXs5jev-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="228" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-1" value="CreateUser (User newUser)" style="swimlane;fontStyle=3;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-1" value="CreateUser (User newUser)" style="swimlane;fontStyle=3;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="10" y="120" width="370" height="216" as="geometry">
             <mxRectangle x="230" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-2" value="Name" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-2" value="Name" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-1" vertex="1">
           <mxGeometry y="26" width="370" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-3" value="Email" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-3" value="Email" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-1" vertex="1">
           <mxGeometry y="52" width="370" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-4" value="Surname" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-4" value="Surname" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-1" vertex="1">
           <mxGeometry y="78" width="370" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-6" value="Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-6" value="Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-1" vertex="1">
           <mxGeometry y="104" width="370" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-15" value="https://localhost:5100/api/Users/CreateUser" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-15" value="https://localhost:5100/api/Users/CreateUser" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-1" vertex="1">
           <mxGeometry y="130" width="370" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-1" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Create user eshte metod per krijimin e&amp;nbsp; userit.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;User esht personi kryesor i cili me&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&amp;nbsp;pas krijon klinik.&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-1">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-1" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Create user eshte metod per krijimin e&amp;nbsp; userit.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;User esht personi kryesor i cili me&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&amp;nbsp;pas krijon klinik.&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;" parent="dVNsWB34gm-yXkXs5jev-1" vertex="1">
           <mxGeometry y="156" width="370" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-7" value="ChangePassword(int Id, ChangePassword changePassword)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;" vertex="1" parent="1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-7" value="ChangePassword(int Id, ChangePassword changePassword)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="10" y="360" width="372.5" height="220" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-8" value="Id( te personit qe kerkon ndrim passwordi)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-7">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-8" value="Id( te personit qe kerkon ndrim passwordi)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-7" vertex="1">
           <mxGeometry y="26" width="372.5" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-9" value="Old Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-7">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-9" value="Old Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-7" vertex="1">
           <mxGeometry y="52" width="372.5" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-11" value="New Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-7">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-11" value="New Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-7" vertex="1">
           <mxGeometry y="78" width="372.5" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-17" value="https://localhost:5100/api/Users/ChangePassword" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-7">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-17" value="https://localhost:5100/api/Users/ChangePassword" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="dVNsWB34gm-yXkXs5jev-7" vertex="1">
           <mxGeometry y="104" width="372.5" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-11" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda e ben ndryshimin e passwordit, Metoda pret Id, Id e userit&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;te cilit ia ndryshojm passwordin, si dhe pret passwordin e vjeter&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;dhe passwordin e ri, dhe nese passwordi i vjeter eshte i sakt&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;ateher vazhdon procedura qe passwordin e vjeter ta ndron&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-7">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-11" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda e ben ndryshimin e passwordit, Metoda pret Id, Id e userit&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;te cilit ia ndryshojm passwordin, si dhe pret passwordin e vjeter&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;dhe passwordin e ri, dhe nese passwordi i vjeter eshte i sakt&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;ateher vazhdon procedura qe passwordin e vjeter ta ndron&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;" parent="dVNsWB34gm-yXkXs5jev-7" vertex="1">
           <mxGeometry y="130" width="372.5" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=#FFFFFF;" parent="1" source="dVNsWB34gm-yXkXs5jev-14" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="354" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-14" value="ChangeEmail(int Id, ChangeEmail changeEmail" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;swimlaneFillColor=#66FFB3;" vertex="1" parent="1">
-          <mxGeometry x="500" y="300" width="340" height="216" as="geometry">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-14" value="ChangeEmail(int Id, ChangeEmail changeEmail" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;swimlaneFillColor=#66FFB3;" parent="1" vertex="1">
+          <mxGeometry x="500" y="320" width="340" height="216" as="geometry">
             <mxRectangle x="545" y="347" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-9" value="Id (te personit qe kerkon ndrim emaili)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-9" value="Id (te personit qe kerkon ndrim emaili)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-14" vertex="1">
           <mxGeometry y="26" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-12" value="OldEmail" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-12" value="OldEmail" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-14" vertex="1">
           <mxGeometry y="52" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-13" value="NewEmail" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-13" value="NewEmail" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-14" vertex="1">
           <mxGeometry y="78" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-14" value="Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-14" value="Password" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-14" vertex="1">
           <mxGeometry y="104" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-18" value="https://localhost:5100/api/Users/ChangeEmail" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-18" value="https://localhost:5100/api/Users/ChangeEmail" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-14" vertex="1">
           <mxGeometry y="130" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-5" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda ben ndrimin e emailit me kush qe useri e din&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;emailin e vjeter edhe passwordin, dhe vetem ateher&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;do te behet ndrimi i emailit ne ate qe e ka shkuar.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-14">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-5" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda ben ndrimin e emailit me kush qe useri e din&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;emailin e vjeter edhe passwordin, dhe vetem ateher&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;do te behet ndrimi i emailit ne ate qe e ka shkuar.&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-14" vertex="1">
           <mxGeometry y="156" width="340" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dVNsWB34gm-yXkXs5jev-18">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;labelBackgroundColor=#FFFFFF;" parent="1" source="dVNsWB34gm-yXkXs5jev-18" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="163" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-18" value="UpdatePersonalInformation (int Id, User user)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;swimlaneFillColor=#66FFB3;" vertex="1" parent="1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-18" value="UpdatePersonalInformation (int Id, User user)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;labelBackgroundColor=#FFFFFF;swimlaneFillColor=#66FFB3;" parent="1" vertex="1">
           <mxGeometry x="500" y="120" width="340" height="170" as="geometry">
             <mxRectangle x="508" y="120" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-8" value="Id(te personit qe kerkon ndryshime)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-18">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-8" value="Id(te personit qe kerkon ndryshime)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-18" vertex="1">
           <mxGeometry y="26" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-19" value="Name" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-18">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-19" value="Name" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-18" vertex="1">
           <mxGeometry y="52" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-20" value="Surname" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-18">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-20" value="Surname" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-18" vertex="1">
           <mxGeometry y="78" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-16" value="https://localhost:5100/api/Users/UpdatePersonalInformation " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-18">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-16" value="https://localhost:5100/api/Users/UpdatePersonalInformation " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-18" vertex="1">
           <mxGeometry y="104" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-6" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda e ben ndryshimin e emrit dhe mbiemrit&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;te userit qe kemi .&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-18">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-6" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda e ben ndryshimin e emrit dhe mbiemrit&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;te userit qe kemi .&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-18" vertex="1">
           <mxGeometry y="130" width="340" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dVNsWB34gm-yXkXs5jev-31">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;" parent="1" source="dVNsWB34gm-yXkXs5jev-31" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="602" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-31" value="Login(Login login)" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=default;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;labelBorderColor=none;" vertex="1" parent="1">
-          <mxGeometry x="500" y="530" width="340" height="144" as="geometry" />
+        <mxCell id="dVNsWB34gm-yXkXs5jev-31" value="Login(Login login)" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=default;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;labelBorderColor=none;" parent="1" vertex="1">
+          <mxGeometry x="500" y="566" width="340" height="144" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-32" value="Email" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fontColor=#333333;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-31">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-32" value="Email" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fontColor=#333333;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-31" vertex="1">
           <mxGeometry y="26" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-33" value="Password" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fontColor=#333333;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-31">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-33" value="Password" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;labelBackgroundColor=#FFFFFF;fontColor=#333333;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-31" vertex="1">
           <mxGeometry y="52" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-19" value="https://localhost:5100/api/Users/Login" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-31">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-19" value="https://localhost:5100/api/Users/Login" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;labelBackgroundColor=#FFFFFF;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-31" vertex="1">
           <mxGeometry y="78" width="340" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-20" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda ben login per userin. Informatat e nevojshme jane&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;emaili dhe passwordi.&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;" vertex="1" parent="dVNsWB34gm-yXkXs5jev-31">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-20" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Metoda ben login per userin. Informatat e nevojshme jane&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;emaili dhe passwordi.&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;labelBackgroundColor=default;swimlaneFillColor=#66FFB3;" parent="dVNsWB34gm-yXkXs5jev-31" vertex="1">
           <mxGeometry y="104" width="340" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dVNsWB34gm-yXkXs5jev-42" target="qTn01u50Xc4HS7Byytp3-22">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=#FFFFFF;" parent="1" source="dVNsWB34gm-yXkXs5jev-42" target="qTn01u50Xc4HS7Byytp3-22" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="430" y="751.6666666666666" as="targetPoint" />
             <Array as="points">
@@ -524,13 +524,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dVNsWB34gm-yXkXs5jev-42" value="&lt;h1&gt;&lt;i&gt;Users Controller&lt;/i&gt;&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=default;gradientColor=none;" vertex="1" parent="1">
+        <mxCell id="dVNsWB34gm-yXkXs5jev-42" value="&lt;h1&gt;&lt;i&gt;Users Controller&lt;/i&gt;&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
           <mxGeometry x="320" y="30" width="210" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-22" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;rounded=0;labelBackgroundColor=default;" vertex="1" parent="1">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-22" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;rounded=0;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="425" y="709.9966666666666" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qTn01u50Xc4HS7Byytp3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="dVNsWB34gm-yXkXs5jev-8">
+        <mxCell id="qTn01u50Xc4HS7Byytp3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=#FFFFFF;" parent="1" source="dVNsWB34gm-yXkXs5jev-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="440" y="399" as="targetPoint" />
           </mxGeometry>
