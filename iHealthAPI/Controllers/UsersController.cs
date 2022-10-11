@@ -26,16 +26,25 @@ namespace iHealthAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUser(User newUser)
         {
-            var user = new User
+            var emailExists = dbContext.User.Where(x => x.Email == newUser.Email).FirstOrDefault();
+            if (emailExists == null)
             {
-                Name = newUser.Name,
-                Email = newUser.Email,
-                Surname = newUser.Surname,
-                Password = reusable.HashString(newUser.Password)
-            };
-            await dbContext.User.AddAsync(user);
-            await dbContext.SaveChangesAsync();
-            return Ok(user);
+                var user = new User
+                {
+                    Name = newUser.Name,
+                    Email = newUser.Email,
+                    Surname = newUser.Surname,
+                    Password = reusable.HashString(newUser.Password)
+                };
+                await dbContext.User.AddAsync(user);
+                await dbContext.SaveChangesAsync();
+                var result = new OkObjectResult(new { message = "Status code 200. User is created successfully!", user = user });
+                return result;
+            }
+            else
+            {
+                return BadRequest("User with this email already exists");
+            }
         }
 
         // Get method for user page
@@ -45,7 +54,8 @@ namespace iHealthAPI.Controllers
             var user = await dbContext.User.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (user != null)
             {
-                return Ok(user);
+                var result = new OkObjectResult(new { user = user });
+                return result;
             }
             return NotFound("User is not found");
         }
