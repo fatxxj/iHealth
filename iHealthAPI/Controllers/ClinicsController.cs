@@ -84,7 +84,7 @@ namespace iHealthAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateClinicAsync(int Id, UpdateClinicModel updateClinic)
+        public async Task<IActionResult> UpdateClinic(int Id, UpdateClinicModel updateClinic)
         {
             var existingClinic = dbContext.Clinic.Where(x => x.Id == Id).FirstOrDefault();
             if (existingClinic != null)
