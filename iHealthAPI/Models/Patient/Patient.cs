@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -11,6 +12,9 @@ namespace iHealthAPI.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -32,19 +36,16 @@ namespace iHealthAPI.Models
 
         public int? PlaceId { get; set; }
 
-        // [Required]
-        // public int? DoctorId { get; set; }
-
         [Required]
         public int ClinicId { get; set; }
 
         public int? DoctorId { get; set; }
 
-        public virtual Place Place { get; set; }
+        public virtual Place? Place { get; set; }
 
         //TODO: Link doctor
-        public virtual Clinic Clinic { get; set; }
+        public virtual Clinic? Clinic { get; set; }
 
-        public virtual ICollection<Doctor> Doctors { get; set; }
+        public virtual ICollection<Doctor>? Doctors { get; set; }
     }
 }

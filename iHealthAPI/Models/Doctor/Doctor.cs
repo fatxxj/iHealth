@@ -33,7 +33,6 @@ namespace iHealthAPI.Models
         [Required]
         public string Faksimil { get; set; }
 
-        [Required]
         public string Image { get; set; }
 
         //Table references below ⤵
@@ -45,9 +44,9 @@ namespace iHealthAPI.Models
 
         public int? PatientId { get; set; }
 
-        public virtual Place Place { get; set; }
-        public virtual Clinic Clinic { get; set; }
+        public virtual Place? Place { get; set; }
+        public virtual Clinic? Clinic { get; set; }
 
-        public virtual ICollection<Patient> Patients { get; set; }
+        public virtual ICollection<Patient>? Patients { get; set; }
     }
 }

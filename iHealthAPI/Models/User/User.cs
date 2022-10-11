@@ -28,12 +28,12 @@ namespace iHealthAPI.Models
         public string Password { get; set; }
 
         [Display(Name = "PlaceId")]
-        public int PlaceId { get; set; }
+        public int? PlaceId { get; set; }
 
         [Display(Name = "ClinicId")]
         public int ClinicId { get; set; }
 
-        public virtual ICollection<Clinic> Clinics { get; set; }
-        public virtual Place Place { get; set; }
+        public virtual ICollection<Clinic>? Clinics { get; set; }
+        public virtual Place? Place { get; set; }
     }
 }
