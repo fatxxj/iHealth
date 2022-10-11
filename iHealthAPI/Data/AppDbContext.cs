@@ -39,7 +39,6 @@ namespace iHealthAPI.Data
 
 
 
-        public DbSet<Contact> Contacts { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Clinic> Clinic { get; set; }
         public DbSet<Place> Place { get; set; }

@@ -6,7 +6,6 @@ namespace iHealthAPI.Models
     public class Clinic
     {
         [Key]
-        [Required]
         [Display(Name = "Id")]
         public int Id { get; set; }
 

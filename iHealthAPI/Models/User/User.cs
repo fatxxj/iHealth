@@ -6,7 +6,6 @@ namespace iHealthAPI.Models
     public class User
     {
         [Key]
-        [Required]
         [Display(Name = "Id")]
         public int Id { get; set; }
 
