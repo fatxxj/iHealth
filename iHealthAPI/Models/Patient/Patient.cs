@@ -34,6 +34,9 @@ namespace iHealthAPI.Models
 
         public string Email { get; set; }
 
+
+        //Referece tables
+
         public int? PlaceId { get; set; }
 
         [Required]
