@@ -1,4 +1,4 @@
-<header>
+<header *ngIf="showHeader">
     <div class="header-grid">
         <div class="header-left-style">
             <div class="medical-icon">
@@ -17,9 +17,28 @@
                     routerLink="/planing-princing"> Planing & Pricing</button>
             <div class="create-login-button">
                 <button mat-button
-                        routerLink="/register-client"> Create Account</button>
+                        [matMenuTriggerFor]="menu"
+                        *ngIf="isUserLoggedIn">Profili Im</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item
+                            routerLink="edit-profile"
+                            class="edit">Edit Profile</button>
+                    <button mat-menu-item
+                            routerLink="/login">Logout</button>
+                </mat-menu>
                 <button mat-button
-                        routerLink="/login"> Login</button>
+                        routerLink="/#"
+                        *ngIf="isUserLoggedIn">My Clinic</button>
+
+
+
+
+                <button mat-button
+                        routerLink="/register-client"
+                        *ngIf="!isUserLoggedIn"> Create Account</button>
+                <button mat-button
+                        routerLink="/login"
+                        *ngIf="!isUserLoggedIn"> Login</button>
             </div>
         </div>
     </div>
@@ -32,7 +51,7 @@
 <footer>
     <div class="footer">
 
-        <span>Developet by F.J</span>
+        <span>Developet by ska me Ne</span>
 
 
     </div>

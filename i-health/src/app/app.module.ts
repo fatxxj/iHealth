@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +11,9 @@ import { LoginComponent } from './components/login/login.component';
 import { PlaningPrincingComponent } from './components/planing-princing/planing-princing.component';
 import { ServiceComponent } from './components/service/service.component';
 import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatMenuModule
 
 
 
