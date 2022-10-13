@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using ihealthapi.Models;
 
 namespace iHealthAPI.Models
 {
@@ -39,14 +40,19 @@ namespace iHealthAPI.Models
 
         //TODO: Link JOBS
 
+        //Foregin keys
         public int? PlaceId { get; set; }
         public int? ClinicId { get; set; }
-
         public int? PatientId { get; set; }
+        public int? WorkerId { get; set; }
+
+        //Referenced tables
 
         public virtual Place? Place { get; set; }
         public virtual Clinic? Clinic { get; set; }
 
         public virtual ICollection<Patient>? Patients { get; set; }
+
+        public virtual Worker? Worker { get; set; }
     }
 }

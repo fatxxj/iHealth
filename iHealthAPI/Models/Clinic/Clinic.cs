@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ihealthapi.Models;
 
 namespace iHealthAPI.Models
 {
@@ -33,26 +34,26 @@ namespace iHealthAPI.Models
         [Display(Name = "Image")]
         public string Image { get; set; }
 
+        //Reference Tables
+
+        //Foreign Keys
         [Required]
-        [Display(Name = "UserId")]
         public int UserId { get; set; }
 
-        [Display(Name = "PlaceId")]
         public int? PlaceId { get; set; }
 
         public int? PatientId { get; set; }
         public int? DoctorId { get; set; }
+        public int? WorkerId { get; set; }
 
-        [Display(Name = "User")]
+        //Referenced tables
         public virtual User? User { get; set; }
-
-        [Display(Name = "Place")]
         public virtual Place? Place { get; set; }
-
         public virtual ICollection<Patient>? Patients { get; set; }
         public virtual ICollection<Doctor>? Doctors { get; set; }
 
-        //TODO: Link Worker after creating worker
+        public virtual ICollection<Worker>? Workers { get; set; }
+
         //TODO: Link Finances after creating finances
         //TODO: Link Archive after creating archive
         //TODO: Link Storage after creating storage

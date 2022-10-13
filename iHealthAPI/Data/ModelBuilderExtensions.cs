@@ -4,6 +4,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Security.Cryptography;
 using iHealthAPI.Models;
+using ihealthapi.Models;
 
 public static class ModelBuilderExtensions
 {
@@ -103,6 +104,17 @@ public static class ModelBuilderExtensions
                     BirthDate = "12.07.2000",
                     ClinicId = 1,
                     Image = "DemoClinic.png"
+                }
+            );
+            modelBuilder
+            .Entity<Worker>()
+            .HasData(
+                new Worker
+                {
+                    Id = 1,
+                    DoctorId = 1,
+                    ClinicId = 1
+                    
                 }
             );
     }
