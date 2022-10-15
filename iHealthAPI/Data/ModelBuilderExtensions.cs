@@ -34,7 +34,14 @@ public static class ModelBuilderExtensions
                     Address = "Demo Address",
                     ZipCode = "Demo ZipCode",
                     CountyName = "Demo Country",
-                    Region = "Demo Region"
+                    Region = "Demo Region",
+                    MapsLink = "https://www.google.com/maps",
+                    Latitude = "12.200",
+                    Longitude = "12.200",
+                    WorkerId = 1,
+                    ClinicId = 1,
+                    PatientId = 1,
+                    UserId = 1
                 }
             );
 
@@ -48,7 +55,8 @@ public static class ModelBuilderExtensions
                     Surname = "Halimi ",
                     Email = "halimifat@gmail.com",
                     Password = HashString("UserPassword "),
-                    PlaceId = 1
+                    PlaceId = 1,
+                    ClinicId = 1
                 }
             );
 
@@ -66,7 +74,9 @@ public static class ModelBuilderExtensions
                     PlaceId = 1,
                     RegistrationNo = "0012343",
                     UserId = 1,
-                    Image = "DemoClinic.png"
+                    Image = "DemoClinic.png",
+                    PatientId = 1,
+                    WorkerId = 1
                 }
             );
 
@@ -83,9 +93,11 @@ public static class ModelBuilderExtensions
                     PlaceId = 1,
                     EMBG = "0012343",
                     Gender = "Male",
-                    BirthDate = "12.07.2000",
+                    BirthDate = new DateTime(2020, 1, 1),
                     ClinicId = 1,
-                    Image = "DemoClinic.png"
+                    Image = "DemoClinic.png",
+                    IsDeleted = false,
+                    WorkerId = 1
                 }
             );
         modelBuilder
@@ -98,30 +110,14 @@ public static class ModelBuilderExtensions
                     Surname = "Doctor Halimi",
                     Email = "halimifat@gmail.com",
                     PhoneNumber = "070224560",
-                    PlaceId = 1,
                     Faksimil = "0012343",
                     Gender = "Male",
-                    BirthDate = "12.07.2000",
+                    BirthDate = new DateTime(2020, 1, 1),
                     WorkerId = 1,
                     Image = "DemoClinic.png"
                 }
             );
-        var WorkingDaysCollection = new List<DateTime>
-        {
-            new DateTime(2020, 1, 1, 12, 10, 0),
-            new DateTime(2020, 2, 1, 13, 10, 0),
-            new DateTime(2020, 3, 1, 14, 10, 0)
 
-            // Add more addresses for Darth Vader if you need to
-        };
-        var WorkingHoursCollection = new List<DateTime>
-        {
-            new DateTime(2020, 1, 1, 13, 10, 0),
-            new DateTime(2020, 2, 1, 14, 10, 0),
-            new DateTime(2020, 3, 1, 15, 10, 0)
-
-            // Add more addresses for Darth Vader if you need to
-        };
         modelBuilder
             .Entity<Worker>()
             .HasData(
@@ -134,7 +130,41 @@ public static class ModelBuilderExtensions
                     Bonuses = 300,
                     PatientId = 1,
                     WorkingDayAndStartTime = new DateTime(2020, 1, 1, 12, 10, 0),
-                    WorkingDayAndEndTime = new DateTime(2020, 1, 1, 13, 10, 0)
+                    WorkingDayAndEndTime = new DateTime(2020, 1, 1, 13, 10, 0),
+                    IsDeleted = false,
+                    IsEmployee = true,
+                    NurseId = 1,
+                    OtherStaffId = 1
+                }
+            );
+
+        modelBuilder
+            .Entity<Nurse>()
+            .HasData(
+                new Nurse
+                {
+                    Id = 1,
+                    Name = "DemoNurse",
+                    Surname = "DemoNurseSurname",
+                    BirthDate = new DateTime(2020, 1, 1, 12, 10, 0),
+                    Speciallity = "Orthodont",
+                    Gender = "Female",
+                    WorkerId = 1
+                }
+            );
+
+        modelBuilder
+            .Entity<OtherStaff>()
+            .HasData(
+                new OtherStaff
+                {
+                    Id = 1,
+                    Name = "OtherStaffName",
+                    Surname = "OtherStaffSurname",
+                    BirthDate = new DateTime(2020, 1, 1, 12, 10, 0),
+                    WorkingDescription = "Hygienist",
+                    Gender = "Female",
+                    WorkerId = 1
                 }
             );
     }

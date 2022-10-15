@@ -26,7 +26,6 @@ namespace iHealthAPI.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Display(Name = "PlaceId")]
         public int? PlaceId { get; set; }
 
         [Display(Name = "ClinicId")]

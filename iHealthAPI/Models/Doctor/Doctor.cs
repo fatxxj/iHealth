@@ -23,7 +23,7 @@ namespace iHealthAPI.Models
         public string Gender { get; set; }
 
         [Required]
-        public string BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         [Required]
         public string Email { get; set; }
@@ -41,12 +41,10 @@ namespace iHealthAPI.Models
         //TODO: Link JOBS
 
         //Foregin keys
-        public int? PlaceId { get; set; }
         public int? WorkerId { get; set; }
 
         //Referenced tables
 
-        public virtual Place? Place { get; set; }
 
         public virtual Worker? Worker { get; set; }
     }
