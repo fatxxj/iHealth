@@ -42,16 +42,11 @@ namespace iHealthAPI.Models
 
         //Foregin keys
         public int? PlaceId { get; set; }
-        public int? ClinicId { get; set; }
-        public int? PatientId { get; set; }
         public int? WorkerId { get; set; }
 
         //Referenced tables
 
         public virtual Place? Place { get; set; }
-        public virtual Clinic? Clinic { get; set; }
-
-        public virtual ICollection<Patient>? Patients { get; set; }
 
         public virtual Worker? Worker { get; set; }
     }

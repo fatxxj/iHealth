@@ -25,6 +25,6 @@ namespace iHealthAPI.Models
 
         public int? PlaceId { get; set; }
 
-        public int? DoctorId { get; set; }
+        public int? WorkerId { get; set; }
     }
 }

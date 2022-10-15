@@ -38,7 +38,7 @@ namespace iHealthAPI.Controllers
                     PhoneNumber = patient.PhoneNumber,
                     Email = patient.Email,
                     ClinicId = patient.ClinicId,
-                    DoctorId = patient.DoctorId
+                    WorkerId = patient.WorkerId
                 };
                 var files = HttpContext.Request.Form.Files;
                 if (files.Count != 0)
@@ -111,7 +111,7 @@ namespace iHealthAPI.Controllers
                 existingPatient.PlaceId = updatePatient.PlaceId;
                 existingPatient.PhoneNumber = updatePatient.PhoneNumber;
                 existingPatient.Email = updatePatient.Email;
-                existingPatient.DoctorId = updatePatient.DoctorId;
+                existingPatient.WorkerId = updatePatient.WorkerId;
 
                 var files = HttpContext.Request.Form.Files;
                 if (files.Count != 0)
