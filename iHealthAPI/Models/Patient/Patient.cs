@@ -33,14 +33,14 @@ namespace iHealthAPI.Models
         public string Email { get; set; }
 
         //Referece tables
-
+        //Foreign keys
         public int? PlaceId { get; set; }
 
         [Required]
         public int ClinicId { get; set; }
-
         public int? WorkerId { get; set; }
 
+        //Referenced tables
         public virtual Place? Place { get; set; }
 
         //TODO: Link doctor
