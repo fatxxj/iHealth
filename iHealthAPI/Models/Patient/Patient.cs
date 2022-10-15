@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+
+using ihealthapi.Models;
 
 namespace iHealthAPI.Models
 {
@@ -34,7 +32,6 @@ namespace iHealthAPI.Models
 
         public string Email { get; set; }
 
-
         //Referece tables
 
         public int? PlaceId { get; set; }
@@ -42,13 +39,13 @@ namespace iHealthAPI.Models
         [Required]
         public int ClinicId { get; set; }
 
-        public int? DoctorId { get; set; }
+        public int? WorkerId { get; set; }
 
         public virtual Place? Place { get; set; }
 
         //TODO: Link doctor
         public virtual Clinic? Clinic { get; set; }
 
-        public virtual ICollection<Doctor>? Doctors { get; set; }
+        public virtual ICollection<Worker>? Workers { get; set; }
     }
 }

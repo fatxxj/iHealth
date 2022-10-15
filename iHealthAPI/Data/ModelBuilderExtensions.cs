@@ -88,7 +88,7 @@ public static class ModelBuilderExtensions
                     Image = "DemoClinic.png"
                 }
             );
-             modelBuilder
+        modelBuilder
             .Entity<Doctor>()
             .HasData(
                 new Doctor
@@ -102,21 +102,40 @@ public static class ModelBuilderExtensions
                     Faksimil = "0012343",
                     Gender = "Male",
                     BirthDate = "12.07.2000",
-                    ClinicId = 1,
+                    WorkerId = 1,
                     Image = "DemoClinic.png"
                 }
             );
-            modelBuilder
+        var WorkingDaysCollection = new List<DateTime>
+        {
+            new DateTime(2020, 1, 1, 12, 10, 0),
+            new DateTime(2020, 2, 1, 13, 10, 0),
+            new DateTime(2020, 3, 1, 14, 10, 0)
+
+            // Add more addresses for Darth Vader if you need to
+        };
+        var WorkingHoursCollection = new List<DateTime>
+        {
+            new DateTime(2020, 1, 1, 13, 10, 0),
+            new DateTime(2020, 2, 1, 14, 10, 0),
+            new DateTime(2020, 3, 1, 15, 10, 0)
+
+            // Add more addresses for Darth Vader if you need to
+        };
+        modelBuilder
             .Entity<Worker>()
             .HasData(
                 new Worker
                 {
                     Id = 1,
                     DoctorId = 1,
-                    ClinicId = 1
-                    
+                    ClinicId = 1,
+                    Salary = 32000,
+                    Bonuses = 300,
+                    PatientId = 1,
+                    WorkingDayAndStartTime = new DateTime(2020, 1, 1, 12, 10, 0),
+                    WorkingDayAndEndTime = new DateTime(2020, 1, 1, 13, 10, 0)
                 }
             );
     }
-    
 }

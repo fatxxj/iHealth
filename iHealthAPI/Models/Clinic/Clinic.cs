@@ -43,14 +43,12 @@ namespace iHealthAPI.Models
         public int? PlaceId { get; set; }
 
         public int? PatientId { get; set; }
-        public int? DoctorId { get; set; }
         public int? WorkerId { get; set; }
 
         //Referenced tables
         public virtual User? User { get; set; }
         public virtual Place? Place { get; set; }
         public virtual ICollection<Patient>? Patients { get; set; }
-        public virtual ICollection<Doctor>? Doctors { get; set; }
 
         public virtual ICollection<Worker>? Workers { get; set; }
 
