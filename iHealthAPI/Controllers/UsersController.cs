@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Net.Http.Headers;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace iHealthAPI.Controllers
 {
@@ -15,11 +20,44 @@ namespace iHealthAPI.Controllers
     {
         private readonly AppDbContext dbContext;
         private readonly IReusableMethods reusable;
+        private readonly IConfiguration configuration;
+        private readonly HttpContext context;
 
-        public UsersController(AppDbContext dbContext, IReusableMethods reusable)
+        public UsersController(AppDbContext dbContext, IReusableMethods reusable, IConfiguration configuration)
         {
             this.dbContext = dbContext;
             this.reusable = reusable;
+            this.configuration = configuration;
+        }
+
+        public bool CheckToken()
+        {
+            var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+            var userId = reusable.ValidateToken(token);
+            if(userId!=null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public string GenerateToken(User user)
+        {
+            // generate token that is valid for 7 days
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(this.configuration.GetValue<string>("Jwt:Key"));
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
 
         // Create user method for the first person tha creates clinic
@@ -37,6 +75,9 @@ namespace iHealthAPI.Controllers
                     Password = reusable.HashString(newUser.Password)
                 };
                 await dbContext.User.AddAsync(user);
+                await dbContext.SaveChangesAsync();
+                var token = GenerateToken(user);
+                user.Token = token;
                 await dbContext.SaveChangesAsync();
                 var result = new OkObjectResult(new { message = "Status code 200. User is created successfully!", user = user });
                 return result;
@@ -121,9 +162,15 @@ namespace iHealthAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(Login login)
         {
+            var token = Request.Headers["Authorization"].FirstOrDefault()?.Split(".").Last();
+            
             var existingUser = await dbContext.User.Where(x => x.Email == login.Email).FirstOrDefaultAsync();
             if (existingUser != null)
             {
+                if(existingUser.Id ==reusable.ValidateToken(token))
+                {
+                    return NotFound();
+                }
                 var logInUser = await reusable.Authenticate(login);
                 return Ok(logInUser);
             }

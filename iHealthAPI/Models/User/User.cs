@@ -17,7 +17,6 @@ namespace iHealthAPI.Models
         [Display(Name = "Surname")]
         public string Surname { get; set; }
 
-        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -30,6 +29,8 @@ namespace iHealthAPI.Models
 
         [Display(Name = "ClinicId")]
         public int ClinicId { get; set; }
+
+        public string? Token { get; set; }
 
         public virtual ICollection<Clinic>? Clinics { get; set; }
         public virtual Place? Place { get; set; }
