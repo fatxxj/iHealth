@@ -4,11 +4,14 @@ using iHealthAPI.Services;
 using iHealthAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
 
@@ -34,7 +37,7 @@ namespace iHealthAPI.Controllers
         {
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
             var userId = reusable.ValidateToken(token);
-            if(userId!=null)
+            if (userId != null)
             {
                 return true;
             }
@@ -42,7 +45,6 @@ namespace iHealthAPI.Controllers
             {
                 return false;
             }
-
         }
 
         public string GenerateToken(User user)
@@ -163,11 +165,11 @@ namespace iHealthAPI.Controllers
         public async Task<IActionResult> Login(Login login)
         {
             var token = Request.Headers["Authorization"].FirstOrDefault()?.Split(".").Last();
-            
+
             var existingUser = await dbContext.User.Where(x => x.Email == login.Email).FirstOrDefaultAsync();
             if (existingUser != null)
             {
-                if(existingUser.Id ==reusable.ValidateToken(token))
+                if (existingUser.Id == reusable.ValidateToken(token))
                 {
                     return NotFound();
                 }
@@ -178,5 +180,56 @@ namespace iHealthAPI.Controllers
         }
 
         //TODO: Log out method
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(int userId, string email, string token) //calls sendChangePassword
+        {
+            var existingUser = await dbContext.User.Where(x => x.Id == userId && x.Email == email).FirstOrDefaultAsync();
+            if (existingUser != null)
+            {
+                SendChangePassword(userId, email, token);
+
+                return StatusCode(200, new { messa = "Password changed successfully " });
+            }
+            return StatusCode(400, new { messa = "Password change failed " });
+        }
+
+        public void SendChangePassword(int userId, string email, string token)
+        {
+            var baseUrl = new Uri(Request.GetEncodedUrl()).GetLeftPart(UriPartial.Authority);
+
+            var url = $"{baseUrl}/Companies/ChangePasswordThroughForget?userId={userId}&token={System.Web.HttpUtility.UrlEncode(token)}";
+
+            var smtp = new System.Net.Mail.SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(configuration.GetSection("EmailConfiguration:Email").Value, configuration.GetSection("EmailConfiguration:Password").Value)
+            };
+
+            MailMessage mailMessage = new MailMessage();
+            mailMessage.IsBodyHtml = true;
+            mailMessage.From = new MailAddress(configuration.GetSection("EmailConfiguration:Email").Value);
+            mailMessage.To.Add(email);
+            mailMessage.Body = "Reset password <a href='" + url + "'>" + " " + "by clicking here" + "</a>.";
+            mailMessage.Subject = "[iHealth-Admin] Reset your user password";
+            smtp.Send(mailMessage);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePasswordThroughForget([FromBody] ChangePasswordFromForget changePasswordFromForget)
+        {
+            var existingUser = await dbContext.User.Where(x => x.Id == changePasswordFromForget.userId).FirstOrDefaultAsync();
+            if (existingUser == null)
+            {
+                return Json(new { statusCode = 404, message = "User not found!" });
+            }
+            existingUser.Password = reusable.HashString(changePasswordFromForget.Password);
+            await dbContext.SaveChangesAsync();
+            return Ok("Password changed successfully!");
+        }
     }
 }
