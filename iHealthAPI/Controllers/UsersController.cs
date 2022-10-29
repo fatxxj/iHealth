@@ -196,9 +196,11 @@ namespace iHealthAPI.Controllers
 
         public void SendChangePassword(int userId, string email, string token)
         {
-            var baseUrl = new Uri(Request.GetEncodedUrl()).GetLeftPart(UriPartial.Authority);
+            var baseUrl = "http://localhost:4200/confirmed-forget-password";
 
-            var url = $"{baseUrl}/Companies/ChangePasswordThroughForget?userId={userId}&token={System.Web.HttpUtility.UrlEncode(token)}";
+
+
+            var url = $"{baseUrl}?userId={userId}&token={System.Web.HttpUtility.UrlEncode(token)}";
 
             var smtp = new System.Net.Mail.SmtpClient
             {
