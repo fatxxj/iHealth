@@ -164,15 +164,15 @@ namespace iHealthAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(Login login)
         {
-            var token = Request.Headers["Authorization"].FirstOrDefault()?.Split(".").Last();
+            //var token = Request.Headers["Authorization"].FirstOrDefault()?.Split(".").Last();
 
             var existingUser = await dbContext.User.Where(x => x.Email == login.Email).FirstOrDefaultAsync();
             if (existingUser != null)
             {
-                if (existingUser.Id == reusable.ValidateToken(token))
-                {
-                    return NotFound();
-                }
+                //if (existingUser.Id == reusable.ValidateToken(token))
+                //{
+                //    return NotFound();
+                //}
                 var logInUser = await reusable.Authenticate(login);
                 return Ok(logInUser);
             }
@@ -182,25 +182,25 @@ namespace iHealthAPI.Controllers
         //TODO: Log out method
 
         [HttpPost]
-        public async Task<IActionResult> ForgotPassword(int userId, string email, string token) //calls sendChangePassword
+        public async Task<IActionResult> ForgotPassword(string email) //calls sendChangePassword
         {
-            var existingUser = await dbContext.User.Where(x => x.Id == userId && x.Email == email).FirstOrDefaultAsync();
+            var existingUser = await dbContext.User.Where(x => x.Email == email).FirstOrDefaultAsync();
             if (existingUser != null)
             {
-                SendChangePassword(userId, email, token);
+                SendChangePassword(existingUser.Id, email);
 
                 return StatusCode(200, new { messa = "Password changed successfully " });
             }
             return StatusCode(400, new { messa = "Password change failed " });
         }
 
-        public void SendChangePassword(int userId, string email, string token)
+        public void SendChangePassword(int userId, string email)
         {
             var baseUrl = "http://localhost:4200/confirmed-forget-password";
 
 
 
-            var url = $"{baseUrl}?userId={userId}&token={System.Web.HttpUtility.UrlEncode(token)}";
+            var url = $"{baseUrl}?userId={userId}&token={System.Web.HttpUtility.UrlEncode("this is token")}";
 
             var smtp = new System.Net.Mail.SmtpClient
             {
