@@ -14,6 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ConfirmedForgetPasswordComponent } from './components/confirmed-forget-password/confirmed-forget-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,9 @@ import { MatMenuModule } from '@angular/material/menu';
     RegisterClientComponent,
     LoginComponent,
     PlaningPrincingComponent,
-    ServiceComponent
+    ServiceComponent,
+    ForgotPasswordComponent,
+    ConfirmedForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +37,8 @@ import { MatMenuModule } from '@angular/material/menu';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatMenuModule
-
+    MatMenuModule,
+    MatIconModule
 
 
   ],
