@@ -1,7 +1,9 @@
 <div class="medical-logo-style">
     <img src="assets/images/medical-logo.png"
          alt=""
-         width="10%">
+         width="10%"
+         routerLink="/home"
+         style="cursor: pointer;">
 </div>
 
 <div class="title-style">
@@ -17,54 +19,65 @@
         <form [formGroup]="form"
               autocomplete="off">
             <div>
-                <mat-form-field appearance="outline"
-                                autocomplete="off">
-
+                <mat-form-field>
+                    <mat-icon matPrefix>person</mat-icon>
                     <input matInput
                            type="text"
                            formControlName="name"
                            placeholder="Name">
-
+                    <mat-error *ngIf="getErrorMessage('name','required')">
+                        Fill in the name field
+                    </mat-error>
                 </mat-form-field>
             </div>
             <div>
-                <mat-form-field appearance="outline"
-                                autocomplete="off">
-
+                <mat-form-field>
+                    <mat-icon matPrefix>person</mat-icon>
                     <input matInput
                            type="text"
                            formControlName="surname"
                            placeholder="Surname">
-
+                    <mat-error *ngIf="getErrorMessage('surname','required')">
+                        Fill in the surname field
+                    </mat-error>
                 </mat-form-field>
             </div>
             <div>
-                <mat-form-field appearance="outline"
-                                autocomplete="off">
-
+                <mat-form-field>
+                    <mat-icon matPrefix>mail</mat-icon>
                     <input matInput
                            type="text"
                            formControlName="email"
                            placeholder="Email">
-
+                    <mat-error *ngIf="getErrorMessage('email','required')">
+                        Fill in the email field
+                    </mat-error>
                 </mat-form-field>
             </div>
             <div>
-                <mat-form-field appearance="outline">
-
+                <mat-form-field>
+                    <mat-icon matPrefix>lock</mat-icon>
                     <input matInput
                            type="password"
                            formControlName="password"
                            placeholder="Password">
-
+                    <mat-error *ngIf="getErrorMessage('password','required')">
+                        Fill in the password field
+                    </mat-error>
+                    <mat-error *ngIf="getErrorMessage('password', 'pattern')">
+                        Password duhet te permbaj Shkronje te madhe, numra, symbole dhe te jete mbi 8 karaktere!
+                    </mat-error>
                 </mat-form-field>
-            </div>
+            </div><br>
             <div class="register-button">
                 <button mat-raised-button
                         color="primary"
                         type="submit"
                         (click)="registerClient()">Register</button>
+
             </div>
-        </form>
+        </form><br>
+        <button mat-raised-button
+                routerLink="/login">Login</button>
     </div>
 </div>
