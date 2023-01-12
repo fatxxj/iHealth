@@ -18,6 +18,14 @@
 ```
 
 
+## Si ta sinkronizojm databazen ndermjet vete dhe si ta azhurojme ?
+
+
+ - Ne jetbrains Rider databaza azhurohet duke krijuar migration. Ne qofte se eshte shtuar ndonje kolone ne ndonje tabele duhet te krijohet migration dhe pastaj te behet update databaza. 
+ - Migration krijohet me: dotnet ef migrations add <Emri i Migrationit>
+ - Qe migrationi te sinkronizohet me databazen duhet : dotnet ef database update.
+ - Migrimet gjenerohen si files ne folderin Migrations dhe te njejtat duhet te behen push.
+ - Pasi qe kemi mar pull ne duhet te bejme dotnet ef database update qe te sinkronizohemi me migrimet qe jan mare me pull. 
 
 ## Si do te funksionojn komitat / pushat ?
 
