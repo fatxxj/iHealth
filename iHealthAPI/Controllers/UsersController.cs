@@ -32,7 +32,7 @@ namespace iHealthAPI.Controllers
             this.reusable = reusable;
             this.configuration = configuration;
         }
-
+        [HttpPost]
         public bool CheckToken()
         {
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
@@ -45,8 +45,8 @@ namespace iHealthAPI.Controllers
             {
                 return false;
             }
-        }
-
+        }   
+        [HttpPost]
         public string GenerateToken(User user)
         {
             // generate token that is valid for 7 days
@@ -193,7 +193,7 @@ namespace iHealthAPI.Controllers
             }
             return StatusCode(400, new { messa = "Password change failed " });
         }
-
+        [HttpPost]
         public void SendChangePassword(int userId, string email)
         {
             var baseUrl = "http://localhost:4200/confirmed-forget-password";

@@ -13,7 +13,7 @@ namespace iHealthAPI.Data
 
         public AppDbContext(DbContextOptions<AppDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
             if (httpContextAccessor != null)
             {
                 _httpContextAccessor = httpContextAccessor;

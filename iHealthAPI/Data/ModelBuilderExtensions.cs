@@ -106,7 +106,7 @@ public static class ModelBuilderExtensions
                 new Doctor
                 {
                     Id = 1,
-                    Name = "Doctor Fat",
+                    Name = "Doctor Fat Halimi",
                     Surname = "Doctor Halimi",
                     Email = "halimifat@gmail.com",
                     PhoneNumber = "070224560",
@@ -167,5 +167,6 @@ public static class ModelBuilderExtensions
                     WorkerId = 1
                 }
             );
+           
     }
 }

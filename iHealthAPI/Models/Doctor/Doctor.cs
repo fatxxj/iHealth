@@ -34,7 +34,9 @@ namespace iHealthAPI.Models
         [Required]
         public string Faksimil { get; set; }
 
-        public string Image { get; set; }
+        public string? Image { get; set; }
+        
+        public string? Token { get; set; }
 
         //Table references below ⤵
 
